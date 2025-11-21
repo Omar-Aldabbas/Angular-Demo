@@ -1,6 +1,6 @@
 <article>
   <h2>{{ task.title }}</h2>
-  <time datetime=""></time>
-  <p>{{ task.text }}</p>
-  <p class="action"><button>Complete</button></p>
+  <time datetime=""> {{ task.dueDate}}</time>
+  <p>{{ task.summary }}</p>
+  <p class="actions"><button (click)="onComplete()">Complete</button></p>
 </article>

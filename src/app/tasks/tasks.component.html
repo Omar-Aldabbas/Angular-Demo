@@ -4,8 +4,12 @@
     <menu><button>Add task</button></menu>
   </header>
 
-<!-- tasks here -->
+  <!-- tasks here -->
   <ul>
-    <app-task [task]="{title: 'hello', text:' no text'}"/>
+    @for (task of selectedUserTasks ; track task.id) {
+    <li>
+      <app-task (complete)="onTaskComplete($event)" [task]="task" />
+    </li>
+    }
   </ul>
 </section>
