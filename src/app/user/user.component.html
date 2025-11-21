@@ -1,0 +1,15 @@
+<div>
+  <button (click)="onSelectUser()">
+    <img
+      [src]="imagePath()"
+      [alt]="user.name + 'avatar image'"
+    />
+    <span>{{ user.name }}</span>
+  </button>
+</div>
+
+<!-- string interpolation {{}}  this only between tags -->
+
+<!-- property binding -->
+<!-- we could use the '{{}}' -->
+<!-- the best practice is by doing this property binding [] -->
