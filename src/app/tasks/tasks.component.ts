@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { TaskComponent } from './task/task.component';
 import { NewTaskComponent } from './new-task/new-task.component';
+import { type Task } from './new-task/new-task.model';
 
 @Component({
   selector: 'app-tasks',
@@ -54,5 +55,13 @@ export class TasksComponent {
 
   onCancelAdd(state: boolean) {
     this.isAddingTask = state;
+  }
+
+  onAddTask(task: Task) {
+    this.tasks.unshift({
+      id: new Date().getTime().toString(),
+      userId: this.userId,
+      ...task
+    })
   }
 }
