@@ -8,14 +8,15 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    UserComponent,
-    TasksComponent,
-    CommonModule,
-  ],
+  // imports: [
+  //   RouterOutlet,
+  //   HeaderComponent,
+  //   UserComponent,
+  //   TasksComponent,
+  //   CommonModule,
+  // ],
   templateUrl: './app.component.html',
+  standalone: false,
   styleUrl: './app.component.css',
 })
 export class AppComponent {
