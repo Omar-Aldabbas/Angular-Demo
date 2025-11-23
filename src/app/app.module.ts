@@ -6,19 +6,26 @@ import { UserComponent } from './user/user.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
+import { CardComponent } from './shared/card/card.component';
+import { FormsModule, NgModel } from '@angular/forms';
+import { TaskComponent } from './tasks/task/task.component';
+import { NewTaskComponent } from './tasks/new-task/new-task.component';
 
 @NgModule({
   //declarations only for fully stand alone component
-  declarations: [AppComponent],
-  bootstrap: [AppComponent],
-  // imports in the other hand is for imported component thats not stand alone
-  imports: [
-    RouterOutlet,
+  declarations: [
+    AppComponent,
     HeaderComponent,
     UserComponent,
+    CardComponent,
     TasksComponent,
-    CommonModule,
-    BrowserModule,
+    TaskComponent,
+    NewTaskComponent,
+  
   ],
+  bootstrap: [AppComponent],
+  // imports in the other hand is for imported component thats not stand alone
+
+  imports: [BrowserModule, FormsModule],
 })
 export class AppModule {}
