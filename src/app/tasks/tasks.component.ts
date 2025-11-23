@@ -24,10 +24,6 @@ export class TasksComponent {
     return this.tasksService.getUserTasks(this.userId)
   }
 
-  onTaskComplete(id: string) {
-    return this.tasksService.deleteTask(id)
-  }
-
   onStartAddTask() {
     this.isAddingTask = true;
   }
@@ -36,7 +32,4 @@ export class TasksComponent {
     this.isAddingTask = state;
   }
 
-  onAddTask(task: Task) {
-    return this.tasksService.addNewUserTask(task, this.userId)
-  }
 }
